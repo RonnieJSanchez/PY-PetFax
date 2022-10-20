@@ -1,8 +1,8 @@
-# config
 from flask import Flask
 
-
 # factory
+
+
 def create_app():
     app = Flask(__name__)
 
@@ -16,8 +16,8 @@ def create_app():
     app.register_blueprint(pet.bp)
 
     # register fact blueprint
-    from . import facts
-    app.register_blueprint(facts.bp)
+    from . import fact
+    app.register_blueprint(fact.bp)
 
     # return the app
     return app
